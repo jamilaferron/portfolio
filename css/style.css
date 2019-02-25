@@ -67,6 +67,7 @@ nav {
 ul {
     float: right;
     margin: 25px 20px 0 0;
+
 }
 
 li {
@@ -84,4 +85,29 @@ a {
 
 li :hover {
     color: #e5e2e8;
+}
+
+.menu-icon {
+    width:40px;
+    height: 40px;
+    margin: 25px 20px 0 0;
+    float: right;
+    display: none;
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .menu-icon {
+        display: inline;
+    }
+
+    nav ul {
+        display: none;
+    }
+
 }
