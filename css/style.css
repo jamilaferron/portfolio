@@ -72,10 +72,16 @@ ul {
 li {
     list-style: none;
     display: inline;
+
 }
 
 a {
     text-decoration: none;
     padding: 5px;
     text-transform: uppercase;
+    color: #000000;
+}
+
+li :hover {
+    color: #e5e2e8;
 }
