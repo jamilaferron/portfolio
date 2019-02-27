@@ -55,14 +55,12 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
+
 }
 
 .container {
-    max-width: 960px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: auto;
     text-align: center;
+
 }
 
 .video-wrapper {
@@ -72,6 +70,7 @@ header {
     width: 100%;
     height: 100vh;
     z-index: 1;
+    box-shadow: 5px 10px 18px #888888;
 }
 
 .video-wrapper video {
@@ -105,6 +104,37 @@ header {
     left: 50%;
 }
 
+.about-wrapper {
+    width: 100%;
+    background-color: #DAA49A;
+    height: 100vh;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.about-wrapper .scroll-icon {
+    color: #AA6373;
+    position: absolute;
+    bottom: -744px;
+    left: 50%;
+}
+
+.section-main {
+    width: 100%;
+}
+
+.profile-text {
+    font-family: 'Muli', sans-serif;
+    color: #ffffff;
+    height: 300px;
+    width: 68%;
+    margin: 0 auto;
+}
+
+.profile-text p {
+    margin-top: 5%;
+
+}
+
 footer {
     width: 100%;
     height: 90px;
@@ -122,6 +152,8 @@ footer {
     background-color: #A9BCD0;
 }
 
+
+
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
@@ -136,6 +168,11 @@ footer {
     nav ul {
         display: none;
     }
+
+    .profile-text {
+        /*width: 100%;*/
+        float: none;
+    }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -145,3 +182,31 @@ footer {
         height: auto;
     }
 }
+
+
+.section-header {
+    padding-top: 10px;
+    height: 250px;
+}
+
+.front-text {
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    z-index: 2;
+    position: relative;
+    top: 55px;
+    text-transform: uppercase;
+}
+
+.shadow-text {
+    font-family: 'Covered By Your Grace', cursive;
+    color: #AA6373;
+    opacity: 0.3;
+    font-size: 7rem;
+    position: relative;
+    top: -173px;
+    z-index: 1;
+}
+
