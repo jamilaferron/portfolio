@@ -102,6 +102,30 @@ header {
     left: 50%;
 }
 
+.section-header {
+    padding-top: 10px;
+    height: 250px;
+}
+
+.front-text {
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 4rem;
+    z-index: 2;
+    position: relative;
+    top: 55px;
+    text-transform: uppercase;
+}
+
+.shadow-text {
+    font-family: 'Covered By Your Grace', cursive;
+    opacity: 0.3;
+    font-size: 7rem;
+    position: relative;
+    top: -173px;
+    z-index: 1;
+}
+
 .about-wrapper {
     width: 100%;
     background-color: #DAA49A;
@@ -131,31 +155,6 @@ header {
     background-color: #353535;
 }
 
-.section-header {
-    padding-top: 10px;
-    height: 250px;
-}
-
-.front-text {
-    color: #ffffff;
-    font-family: 'Muli', sans-serif;
-    font-size: 4rem;
-    z-index: 2;
-    position: relative;
-    top: 55px;
-    text-transform: uppercase;
-}
-
-.shadow-text {
-    font-family: 'Covered By Your Grace', cursive;
-    color: #A9BCD0;
-    opacity: 0.3;
-    font-size: 7rem;
-    position: relative;
-    top: -173px;
-    z-index: 1;
-}
-
 .contact-icon {
     width:60px;
     height: 55px;
@@ -179,8 +178,6 @@ footer {
 .footer-icon :hover {
     background-color: #A9BCD0;
 }
-
-
 
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -239,28 +236,4 @@ footer {
     .about-wrapper .scroll-icon {
         bottom: -700px;
     }
-}
-
-.section-header {
-    padding-top: 10px;
-    height: 250px;
-}
-
-.front-text {
-    color: #ffffff;
-    font-family: 'Muli', sans-serif;
-    font-size: 4rem;
-    z-index: 2;
-    position: relative;
-    top: 55px;
-    text-transform: uppercase;
-}
-
-.shadow-text {
-    font-family: 'Covered By Your Grace', cursive;
-    opacity: 0.3;
-    font-size: 7rem;
-    position: relative;
-    top: -173px;
-    z-index: 1;
 }
