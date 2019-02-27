@@ -55,12 +55,10 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
-
 }
 
 .container {
     text-align: center;
-
 }
 
 .video-wrapper {
@@ -107,14 +105,13 @@ header {
 .about-wrapper {
     width: 100%;
     background-color: #DAA49A;
-    height: 100vh;
     box-shadow: 5px 10px 18px #888888;
 }
 
 .about-wrapper .scroll-icon {
     color: #AA6373;
     position: absolute;
-    bottom: -744px;
+    bottom: -590px;
     left: 50%;
 }
 
@@ -178,8 +175,20 @@ footer {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     /* IE10+ CSS here */
 
+    .container .video-wrapper {
+        box-shadow: none;
+    }
+
     .video-wrapper video {
         height: auto;
+    }
+
+    .container .about-wrapper {
+        box-shadow: none;
+    }
+
+    .about-wrapper .scroll-icon {
+        bottom: -700px;
     }
 }
 
