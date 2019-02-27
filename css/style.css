@@ -115,10 +115,6 @@ header {
     left: 50%;
 }
 
-.section-main {
-    width: 100%;
-}
-
 .profile-text {
     font-family: 'Muli', sans-serif;
     color: #ffffff;
@@ -201,7 +197,6 @@ footer {
 .front-text {
     color: #ffffff;
     font-family: 'Muli', sans-serif;
-    font-weight: 700;
     font-size: 4rem;
     z-index: 2;
     position: relative;
@@ -211,7 +206,6 @@ footer {
 
 .shadow-text {
     font-family: 'Covered By Your Grace', cursive;
-    color: #AA6373;
     opacity: 0.3;
     font-size: 7rem;
     position: relative;
