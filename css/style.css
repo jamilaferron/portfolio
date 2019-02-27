@@ -106,19 +106,19 @@ header {
     width: 100%;
     background-color: #DAA49A;
     box-shadow: 5px 10px 18px #888888;
+    height: 100vh;
 }
 
 .about-wrapper .scroll-icon {
     color: #AA6373;
     position: absolute;
-    bottom: -590px;
+    bottom: -749px;
     left: 50%;
 }
 
 .profile-text {
     font-family: 'Muli', sans-serif;
     color: #ffffff;
-    height: 300px;
     width: 68%;
     margin: 0 auto;
 }
@@ -166,6 +166,15 @@ footer {
         /*width: 100%;*/
         float: none;
     }
+
+    .about-wrapper {
+        height: 111vh;
+    }
+
+
+    .about-wrapper .scroll-icon {
+        bottom: -830px;
+    }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -187,7 +196,6 @@ footer {
         bottom: -700px;
     }
 }
-
 
 .section-header {
     padding-top: 10px;
@@ -212,4 +220,5 @@ footer {
     top: -173px;
     z-index: 1;
 }
+
 
