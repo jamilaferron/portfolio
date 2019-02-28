@@ -4,12 +4,10 @@
 
 body {
     margin: 0;
-    font-family: 'Coiny', cursive;
+    font-family: 'Coiny', cursive, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     color: #AA6373;
-    overflow-x: hidden;
-    width: 100%;
 }
 
 nav {
@@ -26,7 +24,6 @@ ul {
 }
 
 li {
-    list-style: none;
     display: inline;
 }
 
@@ -34,8 +31,7 @@ a {
     text-decoration: none;
 }
 
-.nav-bar ul a {
-    text-decoration: none;
+nav ul a {
     padding: 8px;
     text-transform: uppercase;
     color: #AA6373;
@@ -109,7 +105,7 @@ header {
 }
 
 .shadow-text {
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Covered By Your Grace', cursive, sans-serif;
     opacity: 0.3;
     font-size: 7rem;
     position: relative;
