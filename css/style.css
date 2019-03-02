@@ -212,7 +212,7 @@ footer {
 
 /* On screens that are 600px wide or less, the background color is olive */
 @media screen and (max-width: 600px) {
-    .menu-icon {
+    nav img {
         display: inline;
     }
 
