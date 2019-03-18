@@ -79,7 +79,7 @@
 					</td>
 				</tr>
 			</table>
-			<a href="addParagraph.php" class="new-paragraph-button"><button>Add</button></a>
+			<a href="addParagraph.php"><button class="new-paragraph-button">Add</button></a>
 		</section>
 
 	</main>

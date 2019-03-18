@@ -45,13 +45,36 @@ main {
     margin: 10px;
 }
 
-.about-edit h1 {
+.about-edit h1, .add-paragraph h1 {
     text-align: center;
     margin-top: 35px;
 }
 
-.new-paragraph-button {
+button {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.new-paragraph-button {
+
     margin: 22px 68px 0 0;
     float: right;
 }
+
+
+.add-form textarea {
+    display: block;
+    margin: 0 auto;
+}
+
+.add-form input {
+    margin: 22px 442px 0 0;
+    float: right;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.back-button {
+
+    margin: 70px 0 0 442px;
+
+}
+
