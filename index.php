@@ -1,3 +1,11 @@
+<?php
+require 'db/dbConnection.php';
+require 'phpScripts/viewAboutMe.php';
+
+$db = dbConnection();
+$result = getAboutMe($db);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,18 +43,10 @@
 			<h1 class="shadow-text">My Journey</h1>
 		</div>
 		<div class="section-main profile-text">
-			<p>
-				I am a highly motivated full-stack web developer in training with a keen interest in PHP
-				development. I am currently studying at the Mayden Academy in Bath. I have recently attained my
-				BSc in Computing and IT (Software) from the Open University, this is where I decided to embark
-				on a career as a Software Engineer.
-			</p>
-			<p>
-				In my spare time I enjoy learning new creative skills which require me to use my hands and
-				combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit
-				and crochet. When I am not working or indulging in my hobbies you will find me providing support
-				to young people in semi independence accommodation.
-			</p>
+			<?php
+
+				echo viewParagraphs($result);
+			?>
 		</div>
 	</section>
 	<section class="container">
