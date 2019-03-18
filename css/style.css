@@ -203,6 +203,9 @@ footer {
     float: right;
 }
 
+
+
+
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
     .project-container {
