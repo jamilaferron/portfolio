@@ -27,9 +27,7 @@
 			<ul>
 				<li><a href="#">Log Out</a></li>
 			</ul>
-			<div class="page-header">
-				<h1>Dashboard</h1>
-			</div>
+			<h1>Dashboard</h1>
 		</nav>
 	</header>
 	<main>
@@ -81,8 +79,6 @@
 			</table>
 			<a href="addParagraph.php"><button class="new-paragraph-button">Add</button></a>
 		</section>
-
 	</main>
-
 </body>
 </html>

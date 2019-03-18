@@ -33,21 +33,23 @@ main {
     padding-bottom: 12px;
     text-align: center;
     background-color: #A9BCD0;
-    color: white;
+    color: #ffffff;
 }
 
 .paragraphs-table td {
     color: #000000;
 }
 
-.page-header h1 {
-    text-align: center;
-    margin: 10px;
+nav h1 {
+    margin: 10px 0 10px 135px;
 }
 
 .about-edit h1, .add-paragraph h1 {
     text-align: center;
     margin-top: 35px;
+}
+form {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -55,7 +57,6 @@ button {
 }
 
 .new-paragraph-button {
-
     margin: 22px 68px 0 0;
     float: right;
 }

@@ -31,10 +31,11 @@
 	</header>
 	<main>
 		<section class="add-paragraph">
-			<h1>Add Paragraph</h1>
+			<h1>Edit Paragraph</h1>
 			<form class="add-form">
-				<textarea rows="20" cols="63"></textarea>
-				<input type="submit" name="add_submit">
+				<textarea rows="20" cols="63">In my spare time I enjoy learning new creative skills which require me to use my hands and combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit and crochet. When I am not working or indulging in my hobbies you will find me providing support to young people in semi independence accommodation.
+				</textarea>
+				<input type="submit" name="edit_submit">
 			</form>
 		</section>
 		<a href="dashboard.php"><button class="back-button">Back</button></a>
