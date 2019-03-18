@@ -17,23 +17,26 @@
 	<link type="text/css" rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Covered+By+Your+Grace|Muli" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/cms.css">
 </head>
 <body>
 	<header class="container header-section">
 		<nav>
+
 			<img src="img/bars.svg" alt=""/>
 			<ul>
 				<li><a href="#">Log Out</a></li>
 			</ul>
+			<div class="page-header">
+				<h1>Dashboard</h1>
+			</div>
 		</nav>
 	</header>
 	<main>
-		<div>
-			<h1>Dashboard</h1>
-		</div>
-		<section>
+
+		<section class="about-edit">
 			<h1>About Section</h1>
-			<table>
+			<table class="paragraphs-table">
 				<tr>
 					<th>Paragraph</th>
 					<th>Edit</th>
@@ -76,7 +79,7 @@
 					</td>
 				</tr>
 			</table>
-			<a href="addParagraph.php"><button>Add</button></a>
+			<a href="addParagraph.php" class="new-paragraph-button"><button>Add</button></a>
 		</section>
 
 	</main>

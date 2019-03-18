@@ -1,0 +1,57 @@
+body {
+    background-color: #DAA49A;
+}
+nav {
+    background-color: #A9BCD0;
+}
+
+main {
+    margin-top: 100px;
+}
+.paragraphs-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.paragraphs-table td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.paragraphs-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.paragraphs-table tr:hover {
+    background-color: #ddd;
+}
+
+.paragraphs-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #A9BCD0;
+    color: white;
+}
+
+.paragraphs-table td {
+    color: #000000;
+}
+
+.page-header h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.about-edit h1 {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.new-paragraph-button {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin: 22px 68px 0 0;
+    float: right;
+}
