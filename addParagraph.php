@@ -33,11 +33,11 @@
 		<section class="add-paragraph">
 			<h1>Add Paragraph</h1>
 			<form class="add-form">
-				<textarea rows="20" cols="63"></textarea>
+				<textarea rows="20" cols="63" name="new-paragraph"></textarea>
 				<input type="submit" name="add_submit">
 			</form>
 		</section>
-		<a href="dashboard.php"><button class="back-button">Back</button></a>
+		<a href="dashboard.php" class="button back-button">Back</a>
 	</main>
 </body>
 </html>

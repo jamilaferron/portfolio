@@ -50,7 +50,7 @@
 						</p>
 					</td>
 					<td>
-						<a href="editParagraph.php"><button>Edit</button></a>
+						<a href="editParagraph.php" class="button">Edit</a>
 					</td>
 					<td>
 						<form action="" method="post">
@@ -68,7 +68,7 @@
 						</p>
 					</td>
 					<td>
-						<a href="editParagraph.php"><button>Edit</button></a>
+						<a href="editParagraph.php" class="button">Edit</a>
 					</td>
 					<td>
 						<form action="" method="post">
@@ -77,7 +77,7 @@
 					</td>
 				</tr>
 			</table>
-			<a href="addParagraph.php"><button class="new-paragraph-button">Add</button></a>
+			<a href="addParagraph.php" class="button new-paragraph-button">Add</a>
 		</section>
 	</main>
 </body>
