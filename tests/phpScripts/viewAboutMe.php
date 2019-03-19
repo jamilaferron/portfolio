@@ -31,7 +31,7 @@
 		public function testViewParagraphsFailure1()
 		{
 			$expected = '';
-			$input = [['0'=>'']];
+			$input = [['0'=>'This is a Paragraph']];
 			$case = viewParagraphs($input);
 			$this->assertEquals($expected, $case);
 		}
