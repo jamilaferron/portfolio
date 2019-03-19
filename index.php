@@ -1,10 +1,11 @@
 <?php
 require 'db/dbConnection.php';
+require 'phpScripts/functions.php';
 require 'phpScripts/viewAboutMe.php';
 
 $db = dbConnection();
-$result = getAboutMe($db);
-$string = viewParagraphs($result)
+$aboutMeArray = getAboutMe($db);
+$paragraphs = viewParagraphs($aboutMeArray);
 
 ?>
 <!DOCTYPE html>
@@ -44,10 +45,7 @@ $string = viewParagraphs($result)
 			<h1 class="shadow-text">My Journey</h1>
 		</div>
 		<div class="section-main profile-text">
-			<?php
-
-				echo $string;
-			?>
+			<?php echo $paragraphs; ?>
 		</div>
 	</section>
 	<section class="container">
