@@ -5,12 +5,12 @@
 	require 'phpScripts/deleteAboutMe.php';
 
 	$db = dbConnection();
-	$result = getAboutMe($db);
-	$string = displayTableRow($result);
-	$id = $_POST['paragraphId'];
+	$aboutMeArray = getAboutMe($db);
+	$displayTable = displayTableRow($aboutMeArray);
+	$paragraphId = $_POST['paragraphId'];
 
 	if(isset($_POST['delete_item'])) {
-		deleteParagraph($db, $id);
+		deleteParagraph($db, $paragraphId);
 	}
 
 ?>
@@ -50,10 +50,7 @@
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
-				<?php
-
-					echo $string;
-				?>
+				<?php echo $displayTable; ?>
 			</table>
 			<a href="addParagraph.php" class="button new-paragraph-button">Add</a>
 		</section>
