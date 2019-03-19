@@ -4,6 +4,7 @@ require 'phpScripts/viewAboutMe.php';
 
 $db = dbConnection();
 $result = getAboutMe($db);
+$string = viewParagraphs($result)
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +46,7 @@ $result = getAboutMe($db);
 		<div class="section-main profile-text">
 			<?php
 
-				echo viewParagraphs($result);
+				echo $string;
 			?>
 		</div>
 	</section>

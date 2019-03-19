@@ -43,4 +43,12 @@
 			$case = viewParagraphs($input);
 			$this->assertEquals($expected, $case);
 		}
+
+		public function testViewParagraphsFailure3()
+		{
+			$expected = '';
+			$input = [['text'=>'This is a Paragraph']];
+			$case = viewParagraphs($input);
+			$this->assertEquals($expected, $case);
+		}
 	}
