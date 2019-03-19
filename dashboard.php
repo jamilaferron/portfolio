@@ -1,10 +1,18 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: academy
-	 * Date: 2019-03-15
-	 * Time: 16:26
-	 */
+	require 'db/dbConnection.php';
+	require 'phpScripts/viewAboutMe.php';
+	require 'phpScripts/functions.php';
+	require 'phpScripts/deleteAboutMe.php';
+
+	$db = dbConnection();
+	$result = getAboutMe($db);
+	$string = displayTableRow($result);
+	$id = $_POST['paragraphId'];
+
+	if(isset($_POST['delete_item'])) {
+		deleteParagraph($db, $id);
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +39,9 @@
 		</nav>
 	</header>
 	<main>
+		<section class="message">
 
+		</section>
 		<section class="about-edit">
 			<h1>About Section</h1>
 			<table class="paragraphs-table">
@@ -40,42 +50,10 @@
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
-				<tr>
-					<td>
-						<p>
-							I am a highly motivated full-stack web developer in training with a keen interest in PHP
-							development. I am currently studying at the Mayden Academy in Bath. I have recently attained my
-							BSc in Computing and IT (Software) from the Open University, this is where I decided to embark
-							on a career as a Software Engineer.
-						</p>
-					</td>
-					<td>
-						<a href="editParagraph.php" class="button">Edit</a>
-					</td>
-					<td>
-						<form action="" method="post">
-							<input type="submit" value="Delete" name="delete_item">
-						</form>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>
-							In my spare time I enjoy learning new creative skills which require me to use my hands and
-							combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit
-							and crochet. When I am not working or indulging in my hobbies you will find me providing support
-							to young people in semi independence accommodation.
-						</p>
-					</td>
-					<td>
-						<a href="editParagraph.php" class="button">Edit</a>
-					</td>
-					<td>
-						<form action="" method="post">
-							<input type="submit" value="Delete" name="delete_item">
-						</form>
-					</td>
-				</tr>
+				<?php
+
+					echo $string;
+				?>
 			</table>
 			<a href="addParagraph.php" class="button new-paragraph-button">Add</a>
 		</section>

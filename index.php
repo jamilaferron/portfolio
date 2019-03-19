@@ -1,10 +1,11 @@
 <?php
 require 'db/dbConnection.php';
+require 'phpScripts/functions.php';
 require 'phpScripts/viewAboutMe.php';
 
 $db = dbConnection();
 $result = getAboutMe($db);
-$string = viewParagraphs($result)
+$string = viewParagraphs($result);
 
 ?>
 <!DOCTYPE html>
