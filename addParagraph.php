@@ -1,10 +1,17 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: academy
-	 * Date: 2019-03-15
-	 * Time: 16:26
-	 */
+session_start();
+
+require 'db/dbConnection.php';
+require 'phpScripts/addParagraph.php';
+
+$db = dbConnection();
+$paragraph = $_POST['new-paragraph'];
+
+if(isset($_POST['add_submit'])) {
+	$message = addParagraph($db, $paragraph);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +37,14 @@
 		</nav>
 	</header>
 	<main>
+		<section class="message">
+			<?php
+				echo $message;
+			?>
+		</section>
 		<section class="add-paragraph">
 			<h1>Add Paragraph</h1>
-			<form class="add-form">
+			<form method="post" action="addParagraph.php" class="add-form">
 				<textarea rows="20" cols="63" name="new-paragraph"></textarea>
 				<input type="submit" name="add_submit">
 			</form>

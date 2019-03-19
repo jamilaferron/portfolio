@@ -4,7 +4,7 @@
 
 	use PHPUnit\Framework\Testcase;
 
-	class StackTest extends Testcase
+	class ViewAboutMeTest extends Testcase
 	{
 		public function testViewParagraphsSuccess()
 		{
