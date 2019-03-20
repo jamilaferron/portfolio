@@ -34,12 +34,9 @@ if(isset($_POST['add_submit'])) {
 	<link type="text/css" rel="stylesheet" href="css/cms.css">
 </head>
 <body>
-	<header class="container header-section">
-		<nav>
-			<img src="img/bars.svg" alt=""/>
-			<h1>Dashboard</h1>
-		</nav>
-	</header>
+	<nav class="container header-section">
+		<h1>Dashboard</h1>
+	</nav>
 	<main>
 		<section class="message">
 		<?php

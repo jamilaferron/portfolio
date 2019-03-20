@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * This function retrieves an array of paragraph with their associated id's where
+	 * This function retrieves an array of paragraphs with their associated id's where
 	 * their associated deleted field is set to 0.
 	 *
 	 * @param PDO $db as input

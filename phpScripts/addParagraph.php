@@ -7,9 +7,9 @@
 	 * @return String confirmation message
 	 */
 	function addParagraph (PDO $db, string $paragraph) : String {
-			$query = $db->prepare("INSERT INTO `paragraphs` (`paragraph`) VALUES (:paragraph);");
-			$query->execute(['paragraph'=>$paragraph]);
-			return 'Your Paragraph has been saved';
+		$query = $db->prepare("INSERT INTO `paragraphs` (`paragraph`) VALUES (:paragraph);");
+		$query->execute(['paragraph'=>$paragraph]);
+		return 'Your Paragraph has been saved';
 	}
 
 

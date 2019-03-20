@@ -7,7 +7,9 @@
 	$db = dbConnection();
 	$aboutMeArray = getAboutMe($db);
 	$displayTable = displayTableRow($aboutMeArray);
-	$paragraphId = $_POST['paragraphId'];
+	if (isset($_POST['paragraphId'])){
+		$paragraphId = $_POST['paragraphId'];
+	}
 
 	if(isset($_POST['delete_item'])) {
 		deleteParagraph($db, $paragraphId);
@@ -27,17 +29,10 @@
 	<link type="text/css" rel="stylesheet" href="css/cms.css">
 </head>
 <body>
-	<header class="container header-section">
-		<nav>
-
-			<img src="img/bars.svg" alt=""/>
-			<h1>Dashboard</h1>
-		</nav>
-	</header>
+	<nav class="container header-section">
+		<h1>Dashboard</h1>
+	</nav>
 	<main>
-		<section class="message">
-
-		</section>
 		<section class="about-edit">
 			<h1>About Section</h1>
 			<table class="paragraphs-table">
