@@ -42,7 +42,7 @@ if(isset($_POST['add_submit'])) {
 		<section class="add-paragraph">
 			<h1>Add Paragraph</h1>
 			<form method="post" action="addParagraph.php" class="add-form">
-				<textarea rows="20" cols="63" name="new-paragraph"></textarea>
+				<textarea name="new-paragraph"></textarea>
 				<input type="submit" name="add_submit">
 			</form>
 		</section>

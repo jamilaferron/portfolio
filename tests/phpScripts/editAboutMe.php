@@ -7,12 +7,12 @@
 	class EditAboutMeTest extends Testcase
 	{
 		public function testEditParagraphSuccess()
-	{
-		$expected = 'This is a Paragraph';
-		$input = ['paragraph'=>'This is a Paragraph'];
-		$case = displayParagraph($input);
-		$this->assertEquals($expected, $case);
-	}
+		{
+			$expected = 'This is a Paragraph';
+			$input = ['paragraph'=>'This is a Paragraph'];
+			$case = displayParagraph($input);
+			$this->assertEquals($expected, $case);
+		}
 
 		public function testEditParagraphMalformed1()
 		{

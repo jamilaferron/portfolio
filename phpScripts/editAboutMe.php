@@ -1,13 +1,11 @@
 <?php
-
-
 	/**
 	 * This function retrieves a single paragraph based on the given id.
 	 *
 	 * @param PDO $db accepts a valid database connection
 	 * @param int $id accepts the id of a paragraph
 	 *
-	 * @return array of a paragraph
+	 * @return array with one associative array with key value pair of paragraph => text
 	 */
 	function getParagraph (PDO $db, int $id) : array {
 		$query = $db->prepare('SELECT `paragraph` FROM `paragraphs` WHERE `id` = :id;');
@@ -56,12 +54,10 @@
 	 */
 	function displayHiddenInput (int $id) : string {
 		$string = '';
-
 		if ($id < 0){
 			$string = '';
 		} else {
 			$string .=  '<input type="hidden" name="textToEditId" value="' . $id .'">';
 		}
-
 		return $string;
 	}

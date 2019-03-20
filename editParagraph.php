@@ -20,6 +20,7 @@
 		$editedText = $_POST['edit-paragraph'];
 		$id = $_POST['textToEditId'];
 		editParagraph($db, $id, $editedText);
+
 	}
 ?>
 
@@ -46,7 +47,7 @@
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
 			<form method="post" action="editParagraph.php" class="add-form">
-				<textarea rows="20" cols="63" name="edit-paragraph"> <?php echo $textToPopulate; ?>
+				<textarea name="edit-paragraph"> <?php echo $textToPopulate; ?>
 				</textarea>
 				<?php echo $hiddenInput; ?>
 				<input type="submit" name="edit_submit">
