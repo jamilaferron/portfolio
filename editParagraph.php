@@ -64,13 +64,11 @@
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
 			<form method="post" action="editParagraph.php" class="add-form">
-				<textarea name="edit-paragraph">
-					<?php
+				<textarea name="edit-paragraph"><?php
 						if (isset($textToPopulate)){
 							echo $textToPopulate;
 						}
-					?>
-				</textarea>
+					?></textarea>
 				<?php
 					if (isset($hiddenInput)){
 						echo $hiddenInput;
