@@ -14,21 +14,21 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testViewParagraphsMalformed1()
+		public function testViewParagraphsMalformedInt()
 		{
 			$input = 100;
 			$this->expectException(TypeError::class);
 			viewParagraphs($input);
 		}
 
-		public function testViewParagraphsMalformed2()
+		public function testViewParagraphsMalformedString()
 		{
 			$input = 'This is a Paragraph';
 			$this->expectException(TypeError::class);
 			viewParagraphs($input);
 		}
 
-		public function testViewParagraphsFailure1()
+		public function testViewParagraphsFailureIndexedArray()
 		{
 			$expected = '';
 			$input = [['0'=>'This is a Paragraph']];
@@ -36,7 +36,7 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testViewParagraphsFailure2()
+		public function testViewParagraphsFailureEmptyValue()
 		{
 			$expected = '';
 			$input = [['paragraph'=>'']];
@@ -44,7 +44,7 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testViewParagraphsFailure3()
+		public function testViewParagraphsFailureErrorKey()
 		{
 			$expected = '';
 			$input = [['text'=>'This is a Paragraph']];

@@ -13,21 +13,21 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testEditParagraphMalformed1()
+		public function testEditParagraphMalformedInt()
 		{
 			$input = 100;
 			$this->expectException(TypeError::class);
 			displayParagraph($input);
 		}
 
-		public function testEditParagraphMalformed2()
+		public function testEditParagraphMalformedString()
 		{
 			$input = 'This is a Paragraph';
 			$this->expectException(TypeError::class);
 			displayParagraph($input);
 		}
 
-		public function testEditParagraphFailure1()
+		public function testEditParagraphFailureIndexedArray()
 		{
 			$expected = '';
 			$input = ['0'=>'This is a Paragraph'];
@@ -35,7 +35,7 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testEditParagraphFailure2()
+		public function testEditParagraphFailureEmptyValue()
 		{
 			$expected = '';
 			$input = ['paragraph'=>''];
@@ -43,7 +43,7 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testEditParagraphFailure3()
+		public function testEditParagraphFailureErrorKey()
 		{
 			$expected = '';
 			$input = ['text'=>'This is a Paragraph'];
@@ -59,14 +59,14 @@
 			$this->assertEquals($expected, $case);
 		}
 
-		public function testDisplayHiddenInputMalformed1()
+		public function testDisplayHiddenInputMalformedString()
 		{
 			$input = 'this is wrong';
 			$this->expectException(TypeError::class);
 			displayHiddenInput($input);
 		}
 
-		public function testDisplayHiddenInputMalformed2()
+		public function testDisplayHiddenInputMalformedArray()
 		{
 			$input = [];
 			$this->expectException(TypeError::class);
