@@ -47,9 +47,18 @@
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
 			<form method="post" action="editParagraph.php" class="add-form">
-				<textarea name="edit-paragraph"> <?php echo $textToPopulate; ?>
+				<textarea name="edit-paragraph">
+					<?php
+						if (isset($textToPopulate)){
+							echo $textToPopulate;
+						}
+					?>
 				</textarea>
-				<?php echo $hiddenInput; ?>
+				<?php
+					if (isset($hiddenInput)){
+						echo $hiddenInput;
+					}
+				?>
 				<input type="submit" name="edit_submit">
 			</form>
 		</section>

@@ -36,7 +36,9 @@ if(isset($_POST['add_submit'])) {
 	<main>
 		<section class="message">
 			<?php
-				echo $message;
+				if (isset($message)){
+					echo $message;
+				}
 			?>
 		</section>
 		<section class="add-paragraph">
