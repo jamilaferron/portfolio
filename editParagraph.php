@@ -39,9 +39,6 @@
 	<header class="container header-section">
 		<nav>
 			<img src="img/bars.svg" alt=""/>
-			<ul>
-				<li><a href="#">Log Out</a></li>
-			</ul>
 			<h1>Dashboard</h1>
 		</nav>
 	</header>
