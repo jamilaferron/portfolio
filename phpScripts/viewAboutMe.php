@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * This function accepts an array of paragraphs and formats them for viewing as a string.
 	 *

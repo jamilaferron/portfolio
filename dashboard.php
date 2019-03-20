@@ -1,8 +1,8 @@
 <?php
-	require 'db/dbConnection.php';
-	require 'phpScripts/viewAboutMe.php';
-	require 'phpScripts/functions.php';
-	require 'phpScripts/deleteAboutMe.php';
+	require_once 'db/dbConnection.php';
+	require_once 'phpScripts/viewAboutMe.php';
+	require_once 'phpScripts/functions.php';
+	require_once 'phpScripts/deleteAboutMe.php';
 
 	$db = dbConnection();
 	$aboutMeArray = getAboutMe($db);
@@ -12,7 +12,6 @@
 	if(isset($_POST['delete_item'])) {
 		deleteParagraph($db, $paragraphId);
 	}
-
 ?>
 
 <!DOCTYPE html>

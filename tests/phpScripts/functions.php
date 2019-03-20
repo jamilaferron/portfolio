@@ -1,6 +1,5 @@
 <?php
-
-	require '../../phpScripts/functions.php';
+	require_once '../../phpScripts/functions.php';
 
 	use PHPUnit\Framework\Testcase;
 

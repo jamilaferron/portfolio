@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * * This Function updates the deleted field of the selected paragraph with the given id to 1
 	 *

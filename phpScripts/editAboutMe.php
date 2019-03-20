@@ -13,7 +13,6 @@
 		return $query->fetch();
 	}
 
-
 	/**
 	 * This function updates the paragraph field of a selected row in the database where the id
 	 * field is equal to the input $id using the input $text
@@ -28,7 +27,6 @@
 		$query = $db->prepare("UPDATE `paragraphs` SET `paragraph` = :new WHERE `id` = :id;");
 		return $query->execute(['new'=>$text ,'id'=>$id]);
 	}
-
 
 	/**
 	 * This function accepts an array of paragraphs and formats them for viewing as a string.

@@ -1,6 +1,4 @@
 <?php
-
-
 	/**
 	 * This function takes a string submitted from a form and inserts it into the database
 	 *

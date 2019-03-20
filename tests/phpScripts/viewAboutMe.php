@@ -1,6 +1,6 @@
 <?php
 
-	require '../../phpScripts/viewAboutMe.php';
+	require_once '../../phpScripts/viewAboutMe.php';
 
 	use PHPUnit\Framework\Testcase;
 

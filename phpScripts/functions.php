@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * This function retrieves an array of paragraph with their associated id's where
 	 * their associated deleted field is set to 0.
@@ -30,13 +29,13 @@
 						<p>' . $paragraph['paragraph'] . '</p>
 					</td>
 					<td>
-						<form action="editParagraph.php" method="post">
+						<form action="editParagraph.php" method="POST">
 							<input type="hidden" name="paragraphId" value="'. $paragraph['id'] .'">
 							<input type="submit" value="Edit" name="edit_item">
 						</form>
 					</td>
 					<td>
-						<form action="dashboard.php" method="post">
+						<form action="dashboard.php" method="POST">
 							<input type="hidden" name="paragraphId" value="'. $paragraph['id'] .'">
 							<input type="submit" value="Delete" name="delete_item">
 						</form>

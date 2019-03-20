@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	require 'db/dbConnection.php';
-	require 'phpScripts/editAboutMe.php';
-	require 'phpScripts/functions.php';
+	require_once 'db/dbConnection.php';
+	require_once 'phpScripts/editAboutMe.php';
+	require_once 'phpScripts/functions.php';
 
 	$db = dbConnection();
 	if (isset($_POST['paragraphId'])){
@@ -27,18 +27,7 @@
 			editParagraph($db, $id, $editedText);
 			header("Location: dashboard.php");
 		}
-
 	}
-
-
-//	if($checked) {
-//		$id = $_POST['textToEditId'];
-//		editParagraph($db, $id, $editedText);
-//
-//		header("Location: dashboard.php");
-//	} else {
-//		$message = 'Your paragraph is empty or too long';
-//	}
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +52,7 @@
 	<main>
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
-			<form method="post" action="editParagraph.php" class="add-form">
+			<form method="POST" action="editParagraph.php" class="add-form">
 				<textarea name="edit-paragraph"><?php
 						if (isset($textToPopulate)){
 							echo $textToPopulate;

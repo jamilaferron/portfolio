@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require 'db/dbConnection.php';
-require 'phpScripts/addParagraph.php';
-	require 'phpScripts/functions.php';
+require_once 'db/dbConnection.php';
+require_once 'phpScripts/addParagraph.php';
+require_once 'phpScripts/functions.php';
 
 $db = dbConnection();
 
@@ -43,14 +43,14 @@ if(isset($_POST['add_submit'])) {
 	<main>
 		<section class="message">
 		<?php
-				if (isset($message)){
-					echo $message;
-				}
-			?>
+			if (isset($message)){
+				echo $message;
+			}
+		?>
 		</section>
 		<section class="add-paragraph">
 			<h1>Add Paragraph</h1>
-			<form method="post" action="addParagraph.php" class="add-form">
+			<form method="POST" action="addParagraph.php" class="add-form">
 				<textarea name="new-paragraph"></textarea>
 				<input type="submit" name="add_submit">
 			</form>
