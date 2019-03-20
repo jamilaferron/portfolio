@@ -30,7 +30,10 @@
 						<p>' . $paragraph['paragraph'] . '</p>
 					</td>
 					<td>
-						<a href="editParagraph.php" class="button">Edit</a>
+						<form action="editParagraph.php" method="post">
+							<input type="hidden" name="paragraphId" value="'. $paragraph['id'] .'">
+							<input type="submit" value="Edit" name="edit_item">
+						</form>
 					</td>
 					<td>
 						<form action="dashboard.php" method="post">
