@@ -46,11 +46,11 @@
 	}
 
 	/**
-	 * This function accepts an array of paragraphs and formats them for viewing as a string.
+	 * This function accepts an int which represents the id of a selected paragraph and returns
+	 * a string of an hidden input field with the int as the value.
 	 *
-	 * @param array $paragraph accepts an array of one paragraph as input
-	 * @return string which is the selected paragraph for editing from the database for viewing in the
-	 * input field
+	 * @param int $id accepts an int as input
+	 * @return string which is a hidden input field
 	 */
 	function displayHiddenInput (int $id) : string {
 		$string = '';
