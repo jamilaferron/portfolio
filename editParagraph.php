@@ -21,6 +21,8 @@
 		$id = $_POST['textToEditId'];
 		editParagraph($db, $id, $editedText);
 
+		header("Location: dashboard.php");
+
 	}
 ?>
 
