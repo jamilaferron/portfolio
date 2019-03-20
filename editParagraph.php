@@ -2,6 +2,7 @@
 	session_start();
 	require 'db/dbConnection.php';
 	require 'phpScripts/editAboutMe.php';
+	require 'phpScripts/functions.php';
 
 	$db = dbConnection();
 	if (isset($_POST['paragraphId'])){
@@ -18,12 +19,26 @@
 	}
 	else if (isset($_POST['edit_submit'])) {
 		$editedText = $_POST['edit-paragraph'];
-		$id = $_POST['textToEditId'];
-		editParagraph($db, $id, $editedText);
-
-		header("Location: dashboard.php");
+		$checked = checkInputLength($editedText);
+		if (!$checked) {
+			header("Location: dashboard.php");
+		} else {
+			$id = $_POST['textToEditId'];
+			editParagraph($db, $id, $editedText);
+			header("Location: dashboard.php");
+		}
 
 	}
+
+
+//	if($checked) {
+//		$id = $_POST['textToEditId'];
+//		editParagraph($db, $id, $editedText);
+//
+//		header("Location: dashboard.php");
+//	} else {
+//		$message = 'Your paragraph is empty or too long';
+//	}
 ?>
 
 <!DOCTYPE html>

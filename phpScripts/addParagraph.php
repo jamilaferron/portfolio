@@ -9,14 +9,11 @@
 	 * @return String confirmation message
 	 */
 	function addParagraph (PDO $db, string $paragraph) : String {
-		if ($paragraph === '') {
-			return 'Please enter a paragraph';
-		} else {
 			$query = $db->prepare("INSERT INTO `paragraphs` (`paragraph`) VALUES (:paragraph);");
 			$query->execute(['paragraph'=>$paragraph]);
 			return 'Your Paragraph has been saved';
-		}
 	}
+
 
 
 

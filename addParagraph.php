@@ -3,15 +3,22 @@ session_start();
 
 require 'db/dbConnection.php';
 require 'phpScripts/addParagraph.php';
+	require 'phpScripts/functions.php';
 
 $db = dbConnection();
-$paragraph = $_POST['new-paragraph'];
 
-if(isset($_POST['add_submit'])) {
-	$message = addParagraph($db, $paragraph);
+if (isset($_POST['new-paragraph'])){
+	$paragraph = $_POST['new-paragraph'];
 }
 
-
+if(isset($_POST['add_submit'])) {
+	$checked = checkInputLength($paragraph);
+	if($checked) {
+		$message = addParagraph($db, $paragraph);
+	} else {
+		$message = 'Your paragraph is empty or too long';
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +42,7 @@ if(isset($_POST['add_submit'])) {
 	</header>
 	<main>
 		<section class="message">
-			<?php
+		<?php
 				if (isset($message)){
 					echo $message;
 				}
