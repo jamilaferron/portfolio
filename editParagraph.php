@@ -1,10 +1,27 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: academy
-	 * Date: 2019-03-15
-	 * Time: 16:26
-	 */
+	session_start();
+	require 'db/dbConnection.php';
+	require 'phpScripts/editAboutMe.php';
+
+	$db = dbConnection();
+	if (isset($_POST['paragraphId'])){
+		$paragraphId = $_POST['paragraphId'];
+	}
+
+	if (isset($_POST['edit_item'])) {
+		$idToEdit = $_POST['paragraphId'];
+		$textToPopulateArray = getParagraph($db, $idToEdit);
+		$textToPopulate = displayParagraph($textToPopulateArray);
+		if(isset($idToEdit)){
+			$hiddenInput = displayHiddenInput($idToEdit);
+		}
+	}
+	else if (isset($_POST['edit_submit'])) {
+		$editedText = $_POST['edit-paragraph'];
+		$id = $_POST['textToEditId'];
+		editParagraph($db, $id, $editedText);
+
+	}
 ?>
 
 <!DOCTYPE html>
@@ -23,18 +40,16 @@
 	<header class="container header-section">
 		<nav>
 			<img src="img/bars.svg" alt=""/>
-			<ul>
-				<li><a href="#">Log Out</a></li>
-			</ul>
 			<h1>Dashboard</h1>
 		</nav>
 	</header>
 	<main>
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
-			<form class="add-form">
-				<textarea rows="20" cols="63" name="edit-paragraph">In my spare time I enjoy learning new creative skills which require me to use my hands and combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit and crochet. When I am not working or indulging in my hobbies you will find me providing support to young people in semi independence accommodation.
+			<form method="post" action="editParagraph.php" class="add-form">
+				<textarea name="edit-paragraph"> <?php echo $textToPopulate; ?>
 				</textarea>
+				<?php echo $hiddenInput; ?>
 				<input type="submit" name="edit_submit">
 			</form>
 		</section>

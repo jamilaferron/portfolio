@@ -89,3 +89,7 @@ button {
     font-size: 1rem;
 }
 
+textarea {
+    height: 630px;
+    width: 525px;
+}
