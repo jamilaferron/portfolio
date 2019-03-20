@@ -46,3 +46,22 @@
 		}
 		return $string;
 	}
+
+	/**
+	 * This function accepts an array of paragraphs and formats them for viewing as a string.
+	 *
+	 * @param array $paragraph accepts an array of one paragraph as input
+	 * @return string which is the selected paragraph for editing from the database for viewing in the
+	 * input field
+	 */
+	function displayHiddenInput (int $id) : string {
+		$string = '';
+
+		if ($id < 0){
+			$string = '';
+		} else {
+			$string .=  '<input type="hidden" name="textToEditId" value="' . $id .'">';
+		}
+
+		return $string;
+	}

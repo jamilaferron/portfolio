@@ -4,22 +4,22 @@
 	require 'phpScripts/editAboutMe.php';
 
 	$db = dbConnection();
-	$paragraphId = $_POST['paragraphId'];
+	if (isset($_POST['paragraphId'])){
+		$paragraphId = $_POST['paragraphId'];
+	}
 
 	if (isset($_POST['edit_item'])) {
 		$idToEdit = $_POST['paragraphId'];
 		$textToPopulateArray = getParagraph($db, $idToEdit);
 		$textToPopulate = displayParagraph($textToPopulateArray);
+		if(isset($idToEdit)){
+			$hiddenInput = displayHiddenInput($idToEdit);
+		}
 	}
 	else if (isset($_POST['edit_submit'])) {
 		$editedText = $_POST['edit-paragraph'];
 		$id = $_POST['textToEditId'];
-		$result = editParagraph($db, $id, $editedText);
-		if ($result) {
-			$message = '<p>Your paragraph has been edited!</p>';
-		} else {
-			$message = '<p>Your paragraph has not been edited!</p>';
-		}
+		editParagraph($db, $id, $editedText);
 	}
 ?>
 
@@ -43,20 +43,12 @@
 		</nav>
 	</header>
 	<main>
-		<section class="message">
-			<?php  echo $message; ?>
-		</section>
 		<section class="add-paragraph">
 			<h1>Edit Paragraph</h1>
 			<form method="post" action="editParagraph.php" class="add-form">
 				<textarea rows="20" cols="63" name="edit-paragraph"> <?php echo $textToPopulate; ?>
 				</textarea>
-				<?php
-					if(isset($idToEdit)) {
-						echo '<input type="hidden" name="textToEditId" value="' . $idToEdit .'">';
-
-					}
-				?>
+				<?php echo $hiddenInput; ?>
 				<input type="submit" name="edit_submit">
 			</form>
 		</section>
