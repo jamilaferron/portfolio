@@ -6,7 +6,7 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
-# Database: portfolio_cms
+# Database: jamila_portfolio
 # Generation Time: 2019-03-21 10:02:03 +0000
 # ************************************************************
 
@@ -37,25 +37,8 @@ LOCK TABLES `paragraphs` WRITE;
 
 INSERT INTO `paragraphs` (`id`, `paragraph`, `deleted`)
 VALUES
-	(1,'I am a highly motivated full-stack web developer in training with a keen interest in PHP development. I am currently studying at the Mayden Academy in Bath. I have recently attained my BSc in Computing and IT (Software) from the Open University, this is where I decided to embark on a career as a Software Engineer.	 											',0),
-	(2,'In my spare time I enjoy learning new creative skills which require me to use my hands and combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit and crochet. When I am not working or indulging in my hobbies you will find me providing support to young people in semi independence accommodation.',0),
-	(3,'Hi',1),
-	(4,'This is cool',1),
-	(5,'this is cooler',1),
-	(6,'please make this work',1),
-	(7,'fingers crossed ',1),
-	(8,'last go',1),
-	(9,'please let this work',1),
-	(10,'is this going to work',1),
-	(11,'workers',1),
-	(12,'still works',1),
-	(13,'works twice',1),
-	(14,'1ooth try',1),
-	(15,'this is a test',1),
-	(16,'this is another test',1),
-	(17,'uyfvhjfytkf h',1),
-	(18,'uyfvhjfytkf hjo;jp;oi',1),
-	(19,'I am a highly motivated full-stack web developer in training with a keen interest in PHP development. I am currently studying at the Mayden Academy in Bath. I have recently attained my BSc in Computing and IT (Software) from the Open University, this is where I decided to embark on a career as a Software Engineer.',1);
+	(1,'I am a highly motivated full-stack web developer in training with a keen interest in PHP development. I am currently studying at the Mayden Academy in Bath. I have recently attained my BSc in Computing and IT (Software) from the Open University, this is where I decided to embark on a career as a Software Engineer.',0),
+	(2,'In my spare time I enjoy learning new creative skills which require me to use my hands and combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit and crochet. When I am not working or indulging in my hobbies you will find me providing support to young people in semi independence accommodation.',0);
 
 /*!40000 ALTER TABLE `paragraphs` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -78,7 +61,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `username`, `password`)
 VALUES
-	(2,'jferron','$2y$10$r8oZwA7/JbZKUYMzS2Xb7O3/s7gc46IDOKvCUdGQKIct84CP1pORe');
+	(1,'jferron','$2y$10$r8oZwA7/JbZKUYMzS2Xb7O3/s7gc46IDOKvCUdGQKIct84CP1pORe');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
