@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
-# Database: portfolio_cms
-# Generation Time: 2019-03-15 16:17:09 +0000
+# Database: jamila_portfolio
+# Generation Time: 2019-03-21 10:02:03 +0000
 # ************************************************************
 
 
@@ -41,6 +41,29 @@ VALUES
 	(2,'In my spare time I enjoy learning new creative skills which require me to use my hands and combine multiple ideas to form new creations. In recent years I have taught myself how to sew, knit and crochet. When I am not working or indulging in my hobbies you will find me providing support to young people in semi independence accommodation.',0);
 
 /*!40000 ALTER TABLE `paragraphs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL DEFAULT '',
+  `password` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id`, `username`, `password`)
+VALUES
+	(1,'jferron','$2y$10$r8oZwA7/JbZKUYMzS2Xb7O3/s7gc46IDOKvCUdGQKIct84CP1pORe');
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 

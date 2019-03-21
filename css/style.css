@@ -17,6 +17,17 @@ nav {
     z-index: 10;
 }
 
+.fa-lock {
+    margin: 10px;
+    float: left;
+    font-size: 2rem;
+    color: transparent;
+}
+
+.fa-lock:hover{
+    color: #AA6373;
+}
+
 ul {
     float: right;
     margin: 25px 20px 0 0;
@@ -204,7 +215,10 @@ footer {
 }
 
 
-
+.logout-button {
+    float: right;
+    margin: 22px;
+}
 
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {

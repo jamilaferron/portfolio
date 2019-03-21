@@ -1,11 +1,23 @@
 <?php
+	session_start();
 require 'db/dbConnection.php';
 require 'phpScripts/functions.php';
 require 'phpScripts/viewAboutMe.php';
+require_once 'phpScripts/login.php';
 
 $db = dbConnection();
 $aboutMeArray = getAboutMe($db);
 $paragraphs = viewParagraphs($aboutMeArray);
+
+if(!isset($_SESSION['loggedIn'])) {
+	$_SESSION['loggedIn'] = false;
+}
+
+$loggedIn = $_SESSION['loggedIn'];
+
+logout($loggedIn, 'index.php');
+
+$logoutButton = displayLoginButton($loggedIn, 'index.php')
 
 ?>
 <!DOCTYPE html>
@@ -17,11 +29,16 @@ $paragraphs = viewParagraphs($aboutMeArray);
     <title>Jamila Ferron | Web Developer</title>
 	<link type="text/css" rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Covered+By+Your+Grace|Muli" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="container header-section">
 		<nav>
+			<a href="login.php"><i class="fas fa-lock"></i></a>
+			<?php
+				echo $logoutButton;
+			?>
 			<img src="img/bars.svg" alt=""/>
 			<ul>
 				<li><a href="#about-section">About Me</a></li>

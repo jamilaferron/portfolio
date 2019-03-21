@@ -4,6 +4,15 @@ session_start();
 require_once 'db/dbConnection.php';
 require_once 'phpScripts/addParagraph.php';
 require_once 'phpScripts/functions.php';
+require_once 'phpScripts/login.php';
+
+if(!isset($_SESSION['loggedIn'])) {
+	$_SESSION['loggedIn'] = false;
+}
+
+$loggedIn = $_SESSION['loggedIn'];
+
+check_loggedIn($loggedIn);
 
 $db = dbConnection();
 
@@ -35,6 +44,12 @@ if(isset($_POST['add_submit'])) {
 </head>
 <body>
 	<nav class="container header-section">
+		<div>
+			<a href="index.php">Home</a>
+			<form method="post" action="dashboard.php" class="logout-button">
+				<input type="submit" name="logout" value="Logout">
+			</form>
+		</div>
 		<h1>Dashboard</h1>
 	</nav>
 	<main>
