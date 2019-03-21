@@ -3,6 +3,9 @@
 	require_once 'db/dbConnection.php';
 	require_once 'phpScripts/editAboutMe.php';
 	require_once 'phpScripts/functions.php';
+	require_once 'phpScripts/login.php';
+
+	check_loggedIn($loggedIn);
 
 	$db = dbConnection();
 	if (isset($_POST['paragraphId'])){
