@@ -1,11 +1,21 @@
 <?php
+	session_start();
 require 'db/dbConnection.php';
 require 'phpScripts/functions.php';
 require 'phpScripts/viewAboutMe.php';
+require_once 'phpScripts/login.php';
 
 $db = dbConnection();
 $aboutMeArray = getAboutMe($db);
 $paragraphs = viewParagraphs($aboutMeArray);
+
+if(!isset($_SESSION['loggedIn'])) {
+	$_SESSION['loggedIn'] = false;
+}
+
+logout($loggedIn, 'index.php');
+
+$logoutButton = displayLoginButton($loggedIn, 'index.php')
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +32,9 @@ $paragraphs = viewParagraphs($aboutMeArray);
 <body>
 	<header class="container header-section">
 		<nav>
+			<?php
+				echo $logoutButton;
+			?>
 			<img src="img/bars.svg" alt=""/>
 			<ul>
 				<li><a href="#about-section">About Me</a></li>

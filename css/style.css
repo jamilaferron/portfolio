@@ -204,7 +204,10 @@ footer {
 }
 
 
-
+.logout-button {
+    float: right;
+    margin: 22px;
+}
 
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
