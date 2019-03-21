@@ -27,11 +27,13 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
     <title>Jamila Ferron | Web Developer</title>
 	<link type="text/css" rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Covered+By+Your+Grace|Muli" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="container header-section">
 		<nav>
+			<a href="login.php"><i class="fas fa-lock"></i></a>
 			<?php
 				echo $logoutButton;
 			?>
