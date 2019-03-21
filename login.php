@@ -1,9 +1,13 @@
 <?php
 	session_start();
-	require 'phpScripts/login.php';
+	require_once 'phpScripts/login.php';
 
 	if(!isset($_SESSION['loggedIn'])) {
 		$_SESSION['loggedIn'] = false;
+	}
+
+	if($loggedIn === true) {
+		header('Location: dashboard.php');
 	}
 ?>
 
@@ -25,7 +29,7 @@
 	<a href="index.php" class="home-button">Home</a>
 </nav>
 <section class="login-container">
-	<form method="post" action="phpScripts/functions.php">
+	<form method="post" action="dashboard.php">
 		<div>
 			<label for="userName">Username
 				<input type="text" name="userName">

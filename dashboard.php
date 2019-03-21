@@ -23,6 +23,21 @@
 		deleteParagraph($db, $paragraphId);
 	}
 
+	if(isset($_POST['userName']) && isset($_POST['password'])) {
+		$username = $_POST['userName'];
+		$password = $_POST['password'];
+		$getUserId = getUserId($db, $username);
+		$userId = returnId($getUserId);
+		$hashArray = getpassword($db, $userId);
+		$hashPassword = returnPassword($hashArray);
+		$password_check = password_verify($password, $hashPassword);
+
+		login($password_check, $loggedIn);
+	}
+
+	if(isset($_POST['logout'])) {
+		logout($loggedIn, 'login.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +54,12 @@
 </head>
 <body>
 	<nav class="container header-section">
+		<div>
+			<a href="index.php">Home</a>
+			<form method="post" action="dashboard.php" class="logout-button">
+				<input type="submit" name="logout" value="Logout">
+			</form>
+		</div>
 		<h1>Dashboard</h1>
 	</nav>
 	<main>

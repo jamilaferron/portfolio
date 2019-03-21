@@ -42,6 +42,12 @@ if(isset($_POST['add_submit'])) {
 </head>
 <body>
 	<nav class="container header-section">
+		<div>
+			<a href="index.php">Home</a>
+			<form method="post" action="dashboard.php" class="logout-button">
+				<input type="submit" name="logout" value="Logout">
+			</form>
+		</div>
 		<h1>Dashboard</h1>
 	</nav>
 	<main>
