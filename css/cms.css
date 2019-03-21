@@ -82,3 +82,28 @@ textarea {
     height: 630px;
     width: 525px;
 }
+
+.login-container{
+    width: 100%;
+    margin-top: 250px;
+    align-content: center;
+}
+
+.login-container form{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-container form div{
+    width: 21%;
+    margin: 27px auto;
+}
+nav h1 {
+    display: inline-block;
+}
+
+.container a {
+    float: left;
+    color: #AA6373;
+    padding: 23px;
+}
