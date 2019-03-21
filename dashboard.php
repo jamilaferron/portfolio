@@ -6,6 +6,10 @@
 	require_once 'phpScripts/deleteAboutMe.php';
 	require_once 'phpScripts/login.php';
 
+	if(!isset($_SESSION['loggedIn'])) {
+		$_SESSION['loggedIn'] = false;
+	}
+
 	check_loggedIn($loggedIn);
 
 	$db = dbConnection();
