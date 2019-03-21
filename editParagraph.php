@@ -9,6 +9,8 @@
 		$_SESSION['loggedIn'] = false;
 	}
 
+	$loggedIn = $_SESSION['loggedIn'];
+
 	check_loggedIn($loggedIn);
 
 	$db = dbConnection();

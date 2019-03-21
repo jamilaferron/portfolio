@@ -6,6 +6,8 @@
 		$_SESSION['loggedIn'] = false;
 	}
 
+	$loggedIn = $_SESSION['loggedIn'];
+
 	if($loggedIn === true) {
 		header('Location: dashboard.php');
 	}

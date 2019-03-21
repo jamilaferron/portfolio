@@ -13,6 +13,8 @@ if(!isset($_SESSION['loggedIn'])) {
 	$_SESSION['loggedIn'] = false;
 }
 
+$loggedIn = $_SESSION['loggedIn'];
+
 logout($loggedIn, 'index.php');
 
 $logoutButton = displayLoginButton($loggedIn, 'index.php')
