@@ -1,0 +1,84 @@
+body {
+    background-color: #DAA49A;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+nav {
+    background-color: #A9BCD0;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.paragraphs-table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.paragraphs-table td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.paragraphs-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.paragraphs-table tr:hover {
+    background-color: #ddd;
+}
+
+.paragraphs-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #A9BCD0;
+    color: #ffffff;
+}
+
+.paragraphs-table td {
+    color: #000000;
+}
+
+nav h1 {
+    margin: 10px 0 10px 135px;
+}
+
+.about-edit h1, .add-paragraph h1 {
+    text-align: center;
+}
+
+.new-paragraph-button {
+    margin: 22px 68px 0 0;
+    float: right;
+}
+
+.add-form textarea {
+    display: block;
+    margin: 0 auto;
+}
+
+.add-form input {
+    margin: 22px 442px 0 0;
+    float: right;
+}
+
+.back-button {
+    margin: 60px 0 0 441px;
+    float: left;
+}
+
+.button {
+    color: #000000;
+    width: 70px;
+    text-align: center;
+    border: 1px solid #b4adac;
+    background-color: #e6e6e6;
+    padding: 4px 8px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 630px;
+    width: 525px;
+}
