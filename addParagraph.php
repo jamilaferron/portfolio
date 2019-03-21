@@ -4,6 +4,13 @@ session_start();
 require_once 'db/dbConnection.php';
 require_once 'phpScripts/addParagraph.php';
 require_once 'phpScripts/functions.php';
+require_once 'phpScripts/login.php';
+
+if(!isset($_SESSION['loggedIn'])) {
+	$_SESSION['loggedIn'] = false;
+}
+
+check_loggedIn($loggedIn);
 
 $db = dbConnection();
 
