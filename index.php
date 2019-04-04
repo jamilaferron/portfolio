@@ -86,10 +86,10 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 						<a target="_blank" href="https://git@github.com/jamilaferron/PilotShop-Build"><div class="button"> View More</div></a>
 					</div>
 				</div>
-				<div class="project-container coming-soon">
+				<div class="project-container project-3">
 					<div class="card-overlay">
-						<div class="overlay-text">Logo Challenge</div>
-						<a href="#"><div class="button"> View More</div></a>
+						<div class="overlay-text">Paint Master 3000</div>
+						<a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/"><div class="button"> View More</div></a>
 					</div>
 
 				</div>
