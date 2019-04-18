@@ -93,10 +93,10 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 					</div>
 
 				</div>
-				<div class="project-container coming-soon">
+				<div class="project-container project-4">
 					<div class="card-overlay">
-						<div class="overlay-text">Logo Challenge</div>
-						<a href="#"><div class="button"> View More</div></a>
+						<div class="overlay-text">Aptitude Test</div>
+						<a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test/tree/master/app"><div class="button"> View More</div></a>
 					</div>
 				</div>
 				<div class="project-container coming-soon">
