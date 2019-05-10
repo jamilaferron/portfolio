@@ -42,17 +42,17 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 	<div class="menu_toggler">
 		<span></span>
 	</div>
-<!--	<header class="container header-section">-->
-<!--		<div class="wrapper video-wrapper">-->
-<!--			<video autoplay muted loop>-->
-<!--				<source src="img/compressed.mp4" type="video/mp4">-->
-<!--			</video>-->
-<!--		</div>-->
-<!--		<div class="hero-content">-->
-<!--			<h1> Jamila Ferron</h1>-->
-<!--			<p> Full-stack web developer with an interest in PHP web development</p>-->
-<!--		</div>-->
-<!--	</header>-->
+	<header class="container header-section">
+		<div class="wrapper video-wrapper">
+			<video autoplay muted loop>
+				<source src="img/compressed.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="hero-content">
+			<h1> Jamila Ferron</h1>
+			<p> Full-stack web developer with an interest in PHP web development</p>
+		</div>
+	</header>
 <!--	<section class="container wrapper about-wrapper" id="about-section" >-->
 <!--		<div class="section-header">-->
 <!--			<h1 class="front-text">About Me</h1>-->

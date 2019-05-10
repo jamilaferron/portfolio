@@ -85,7 +85,7 @@ nav {
 }
 
 nav.active {
-    left: 0%;
+    left: 0;
 }
 
 nav a {
@@ -99,4 +99,65 @@ nav a {
 
 nav a:hover {
     color: #b1b1b1;
+}
+
+header {
+    background-color: #373F51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-wrapper video {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 230px;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.hero-content p {
+     font-size: 1.5rem;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+
+    .hero-content {
+        top: 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
 }
