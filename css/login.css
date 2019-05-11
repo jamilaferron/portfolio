@@ -22,6 +22,7 @@
     background-color: #AA6373;
     border: #AA6373;
     color: #FFFFFF;
+    outline: none;
 }
 
 .btn-signin:active:focus {

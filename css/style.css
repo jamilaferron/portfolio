@@ -285,6 +285,20 @@ footer i {
     font-size: 0.7rem;
 }
 
+.btn-logout {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    margin-left: -40px;
+    color: #AA6373;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-logout:hover {
+    color: #b1b1b1;
+
+}
 
 
 /* On screens that are 992px wide or less, the background color is blue */
