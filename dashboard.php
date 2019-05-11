@@ -1,72 +1,12 @@
 <?php
 session_start();
 require_once 'db/dbConnection.php';
-require_once 'phpScripts/paragraphFunctions.php';
 require_once 'phpScripts/utilityFunctions.php';
 require_once 'phpScripts/login.php';
+require_once 'phpScripts/paragraphFunctions.php';
+require_once 'phpScripts/projectFunctions.php';
+require_once 'phpScripts/dashboard.php';
 
-if(!isset($_SESSION['loggedIn'])) {
-	$_SESSION['loggedIn'] = false;
-}
-
-$loggedIn = $_SESSION['loggedIn'];
-
-check_loggedIn($loggedIn);
-
-$db = dbConnection();
-$aboutMeArray = getparagraphs($db);
-$displayAboutMeTable = displayAboutMeTableRow($aboutMeArray);
-$paragraphsModal = displayEditParagraphModal($aboutMeArray);
-
-if (isset($_POST['paragraphId'])){
-	$paragraphId = $_POST['paragraphId'];
-}
-
-if(isset($_POST['delete_item'])) {
-	deleteParagraph($db, $paragraphId);
-}
-
-if (isset($_POST['new-paragraph'])){
-	$paragraph = $_POST['new-paragraph'];
-}
-
-if(isset($_POST['add_submit'])) {
-	$checked = checkInputLength($paragraph);
-	if($checked) {
-		$message = addParagraph($db, $paragraph);
-		header("Location: dashboard.php");
-	} else {
-		$message = 'Your paragraph is empty or too long';
-	}
-}
-
-if (isset($_POST['edit_submit'])) {
-	$editedText = $_POST['edit-paragraph'];
-	$checked = checkInputLength($editedText);
-	if (!$checked) {
-		header("Location: dashboard.php");
-	} else {
-		$id = $_POST['paragraphId'];
-		editParagraph($db, $id, $editedText);
-		header("Location: dashboard.php");
-	}
-}
-
-if(isset($_POST['userName']) && isset($_POST['password'])) {
-	$username = $_POST['userName'];
-	$password = $_POST['password'];
-	$getUserId = getUserId($db, $username);
-	$userId = returnId($getUserId);
-	$hashArray = getpassword($db, $userId);
-	$hashPassword = returnPassword($hashArray);
-	$password_check = password_verify($password, $hashPassword);
-
-	login($password_check, $loggedIn);
-}
-
-if(isset($_POST['logout'])) {
-	logout($loggedIn, 'login.php');
-}
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +26,7 @@ if(isset($_POST['logout'])) {
 
 	<!-- Custom styles for this template-->
 	<link href="css/sb-admin-2.min.css" rel="stylesheet">
-<!--	<link href="css/css.css" rel="stylesheet">-->
+	<link href="css/cms.css" rel="stylesheet">
 </head>
 <body id="page-top">
 
@@ -212,12 +152,40 @@ if(isset($_POST['logout'])) {
 								</tr>
 								</thead>
 								<tbody>
-								<?php echo $displayAboutMeTable; ?>
+								<?php echo $displayParagraphsTable; ?>
 								</tbody>
 							</table>
 							<a href="#" class="btn btn-primary text-uppercase font-weight-bold add-button" data-toggle="modal" data-target="#addParagraphModal">
 								Add
 							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<!-- DataTales Example -->
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="projectTable" width="100%" cellspacing="0">
+								<thead>
+								<tr>
+									<th>Name</th>
+									<th>Link</th>
+									<th>Image</th>
+									<th>Edit</th>
+									<th>Delete</th>
+								</tr>
+								</thead>
+								<tbody>
+								<?php echo $displayProjectsTable; ?>
+								</tbody>
+							</table>
+							<a href="#" class="btn btn-primary text-uppercase font-weight-bold add-button" data-toggle="modal" data-target="#addProjectModal">Add</a>
 						</div>
 					</div>
 				</div>
@@ -273,6 +241,43 @@ if(isset($_POST['logout'])) {
 
 <!-- Edit Paragraph Modal-->
 <?php echo $paragraphsModal ?>
+
+<!-- Add Project Modal-->
+<div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Add New Project</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<form method="POST" action="dashboard.php" class="addprojects-form" enctype="multipart/form-data">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Project Name</label>
+						<input type="text" name="project-name">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Project Link</label>
+						<input type="text" name="project-url">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Add Image</label>
+						<input type="file" name="fileToUpload" id="fileToUpload">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+					<input class="btn btn-primary" type="submit" name="addproject_submit" value="Add">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Edit Project Modal-->
+<?php echo $projectsModal ?>
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

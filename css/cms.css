@@ -1,12 +1,17 @@
-.table-img {
-    height: 100px;
-}
 #paragraphTable td, #paragraphTable th {
     text-align: center;
     vertical-align: middle;
 }
 
+#projectTable td, #projectTable th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-img {
+    height: 100px;
+}
+
 .add-button {
     float: right;
 }
-

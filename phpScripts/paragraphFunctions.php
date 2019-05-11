@@ -20,7 +20,7 @@ function getParagraphs (PDO $db) : array {
  *
  * @return string which is all the paragraphs from the database for viewing as a table
  */
-function displayAboutMeTableRow (array $paragraphs) : string {
+function displayParagraphsTableRow (array $paragraphs) : string {
 	$string = '';
 	foreach ($paragraphs as $paragraph) {
 		if (!in_array('', $paragraph) && array_key_exists('id', $paragraph) && array_key_exists('paragraph', $paragraph)) {
