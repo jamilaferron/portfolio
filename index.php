@@ -37,7 +37,7 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 	<div class="menu_toggler">
 		<span></span>
 	</div>
-	<header class="container header-section">
+	<main class="container">
 		<nav>
 			<a href="#about-section">About Me</a>
 			<a href="#portfolio-section">Portfolio</a>
@@ -61,57 +61,58 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 				<?php echo $paragraphs; ?>
 			</div>
 		</section>
-	</header>
+		<section class="container">
+			<div class="wrapper portfolio-wrapper" id="portfolio-section">
+				<div class="section-header">
+					<h1 class="front-text">
+						Projects
+					</h1>
+					<h1 class="shadow-text">My Work</h1>
+				</div>
+				<div class="gallery">
+					<div class="project-container project-1">
+						<div class="card-overlay">
+							<div class="overlay-text">Logo Challenge</div>
+							<a target="_blank" href="https://github.com/jamilaferron/Mayden-Academy-Logo"><div class="button"> View More</div></a>
+						</div>
+					</div>
+					<div class="project-container project-2">
+						<div class="card-overlay">
+							<div class="overlay-text">Pilot Shop</div>
+							<a target="_blank" href="https://git@github.com/jamilaferron/PilotShop-Build"><div class="button"> View More</div></a>
+						</div>
+					</div>
+					<div class="project-container project-3">
+						<div class="card-overlay">
+							<div class="overlay-text">Paint Master 3000</div>
+							<a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/"><div class="button"> View More</div></a>
+						</div>
 
-<!--	<section class="container">-->
-<!--		<div class="wrapper portfolio-wrapper" id="portfolio-section">-->
-<!--			<div class="section-header">-->
-<!--				<h1 class="front-text">-->
-<!--					Projects-->
-<!--				</h1>-->
-<!--				<h1 class="shadow-text">My Work</h1>-->
-<!--			</div>-->
-<!--			<div class="gallery">-->
-<!--				<div class="project-container project-1">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Logo Challenge</div>-->
-<!--						<a target="_blank" href="https://github.com/jamilaferron/Mayden-Academy-Logo"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="project-container project-2">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Pilot Shop</div>-->
-<!--						<a target="_blank" href="https://git@github.com/jamilaferron/PilotShop-Build"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="project-container project-3">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Paint Master 3000</div>-->
-<!--						<a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!---->
-<!--				</div>-->
-<!--				<div class="project-container project-4">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Aptitude Test</div>-->
-<!--						<a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test/tree/master/app"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="project-container coming-soon">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Logo Challenge</div>-->
-<!--						<a href="#"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="project-container coming-soon">-->
-<!--					<div class="card-overlay">-->
-<!--						<div class="overlay-text">Logo Challenge</div>-->
-<!--						<a href="#"><div class="button"> View More</div></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</section>-->
+					</div>
+					<div class="project-container project-4">
+						<div class="card-overlay">
+							<div class="overlay-text">Aptitude Test</div>
+							<a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test/tree/master/app"><div class="button"> View More</div></a>
+						</div>
+					</div>
+					<div class="project-container coming-soon">
+						<div class="card-overlay">
+							<div class="overlay-text">Logo Challenge</div>
+							<a href="#"><div class="button"> View More</div></a>
+						</div>
+					</div>
+					<div class="project-container coming-soon">
+						<div class="card-overlay">
+							<div class="overlay-text">Logo Challenge</div>
+							<a href="#"><div class="button"> View More</div></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
 <!--	<section class="container">-->
 <!--		<div class="wrapper contact-wrapper" id="contact-section">-->
 <!--			<div class="section-header">-->
