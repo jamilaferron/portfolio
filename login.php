@@ -44,7 +44,7 @@
 									<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
 									<label for="inputPassword">Password</label>
 								</div>
-								<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" name="login">Sign in</button>
+								<button class="btn btn-lg btn-block btn-login text-uppercase font-weight-bold mb-2 btn-signin" type="submit" name="login">Sign in</button>
 								<div class="text-center">
 									<a class="small" href="index.php">Profile</a>
 								</div>
