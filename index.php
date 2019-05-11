@@ -34,15 +34,15 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 	<script src="js/main.js" defer></script>
 </head>
 <body>
-	<nav>
-		<a href="#about-section">About Me</a>
-		<a href="#portfolio-section">Portfolio</a>
-		<a href="#contact-section">Contact Me</a>
-	</nav>
 	<div class="menu_toggler">
 		<span></span>
 	</div>
 	<header class="container header-section">
+		<nav>
+			<a href="#about-section">About Me</a>
+			<a href="#portfolio-section">Portfolio</a>
+			<a href="#contact-section">Contact Me</a>
+		</nav>
 		<div class="wrapper video-wrapper">
 			<video autoplay muted loop>
 				<source src="img/compressed.mp4" type="video/mp4">
@@ -52,16 +52,17 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 			<h1> Jamila Ferron</h1>
 			<p> Full-stack web developer with an interest in PHP web development</p>
 		</div>
+		<section class="container wrapper about-wrapper" id="about-section" >
+			<div class="section-header">
+				<h1 class="front-text">About Me</h1>
+				<h1 class="shadow-text">My Journey</h1>
+			</div>
+			<div class="section-main profile-text">
+				<?php echo $paragraphs; ?>
+			</div>
+		</section>
 	</header>
-<!--	<section class="container wrapper about-wrapper" id="about-section" >-->
-<!--		<div class="section-header">-->
-<!--			<h1 class="front-text">About Me</h1>-->
-<!--			<h1 class="shadow-text">My Journey</h1>-->
-<!--		</div>-->
-<!--		<div class="section-main profile-text">-->
-<!--			--><?php //echo $paragraphs; ?>
-<!--		</div>-->
-<!--	</section>-->
+
 <!--	<section class="container">-->
 <!--		<div class="wrapper portfolio-wrapper" id="portfolio-section">-->
 <!--			<div class="section-header">-->
