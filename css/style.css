@@ -35,7 +35,7 @@ span,
 span::after,
 span::before {
     position: absolute;
-    content: '';
+    content: ' ';
     width: 28px;
     height: 3px;
     background: #AA6373;
@@ -108,11 +108,11 @@ header {
     left: 0;
     width: 100%;
     outline: none;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .video-wrapper video {
@@ -132,6 +132,40 @@ header {
 
 .hero-content p {
      font-size: 1.5rem;
+}
+
+
+.section-header {
+    margin-top: 40px;
+    position: relative;
+}
+
+.front-text {
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 4rem;
+    z-index: 2;
+    position: relative;
+    top: 25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.shadow-text {
+    font-family: 'Covered By Your Grace', cursive, sans-serif;
+    opacity: 0.3;
+    font-size: 7rem;
+    position: relative;
+    bottom: 96px;
+    margin: 0;
+}
+
+.profile-text {
+    font-family: 'Muli', sans-serif;
+    color: #ffffff;
+    width: 80%;
+    margin: -50px auto 0 auto;
+    padding-bottom: 100px;
 }
 
 /* On screens that are 992px wide or less, the background color is blue */
@@ -159,5 +193,14 @@ header {
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .front-text {
+        font-size: 3rem;
+    }
+
+    .shadow-text {
+        font-size: 5rem;
+        top: -64px;
     }
 }
