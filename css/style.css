@@ -18,7 +18,7 @@ body{
 }
 
 .menu_toggler {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     z-index: 9999;
@@ -69,6 +69,20 @@ span::after {
     transform: rotate(220deg);
 }
 
+main {
+    background-color: #373F51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 nav {
     position: absolute;
     z-index: 998;
@@ -78,10 +92,12 @@ nav {
     width: 59%;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     padding: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     transition: 300ms left cubic-bezier(0.77,0,0.175,1);
+}
+
+.nav-links {
+    position: fixed;
+    width: 30%;
 }
 
 nav.active {
@@ -99,20 +115,6 @@ nav a {
 
 nav a:hover {
     color: #b1b1b1;
-}
-
-header {
-    background-color: #373F51;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
 }
 
 .video-wrapper video {
@@ -168,6 +170,73 @@ header {
     padding-bottom: 100px;
 }
 
+.portfolio-wrapper {
+    background-color: #A9BCD0;
+    padding-bottom: 100px;
+    overflow: auto;
+    width: 100vw;
+}
+
+.gallery {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-container{
+    background-position: center;
+    background-size: cover;
+    width: 33.3%;
+    float: left;
+    height: 300px;
+}
+
+.card-overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Muli', sans-serif;
+}
+
+.card-overlay:hover {
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.overlay-text {
+    font-size: 2rem;
+    padding-top: 70px;
+
+}
+
+.button {
+    border: 2px solid #E31B6D;
+    width: 170px;
+    margin: 56px auto;
+    font-size: 13px;
+    padding: 12px 0;
+    color: #AA6373;
+}
+
+.project-1 {
+    background-image: url("../img/638712503.jpg");
+}
+
+.project-2 {
+    background-image: url("../img/pilotshop.png");
+}
+
+.project-3 {
+    background-image: url("../img/paintmaster.png");
+}
+
+.project-4 {
+     background-image: url("../img/aptitudeTest.png");
+ }
+
+.coming-soon {
+    background-image: url("../img/coming-soon-logo_okok.jpg");
+}
+
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
 
@@ -182,6 +251,17 @@ header {
     .hero-content p {
         font-size: 1.1rem;
     }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .project-container{
+        width: 50%;
+
+    }
+
+
 }
 
 /* On screens that are 600px wide or less, the background color is olive */
@@ -202,5 +282,9 @@ header {
     .shadow-text {
         font-size: 5rem;
         top: -64px;
+    }
+
+    .project-container {
+        width: 100%;
     }
 }
