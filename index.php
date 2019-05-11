@@ -1,12 +1,11 @@
 <?php
 	session_start();
 require 'db/dbConnection.php';
-require 'phpScripts/functions.php';
-require 'phpScripts/viewAboutMe.php';
+require 'phpScripts/paragraphFunctions.php';
 require_once 'phpScripts/login.php';
 
 $db = dbConnection();
-$aboutMeArray = getAboutMe($db);
+$aboutMeArray = getParagraphs($db);
 $paragraphs = viewParagraphs($aboutMeArray);
 
 if(!isset($_SESSION['loggedIn'])) {
@@ -46,6 +45,9 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 				<a href="#about-section">About Me</a>
 				<a href="#portfolio-section">Portfolio</a>
 				<a href="#contact-section">Contact Me</a>
+				<?php
+				echo $logoutButton;
+				?>
 			</div>
 
 		</nav>
