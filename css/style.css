@@ -31,9 +31,9 @@ body{
     align-items: center;
 }
 
-span,
-span::after,
-span::before {
+.menu_button,
+.menu_button::after,
+.menu_button::before {
     position: absolute;
     content: ' ';
     width: 28px;
@@ -43,11 +43,11 @@ span::before {
     transition: 500ms cubic-bezier(0.77,0,0.175,1);
 }
 
-span::before {
+.menu_button::before {
     top: -8px;
 }
 
-span::after {
+.menu_button::after {
     top: 8px;
 }
 
@@ -87,7 +87,8 @@ nav {
     position: absolute;
     z-index: 998;
     left: -70%;
-    background: #000000;
+    background: #353535;
+    opacity: 0.9;
     height: 100%;
     width: 59%;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
@@ -115,6 +116,22 @@ nav a {
 
 nav a:hover {
     color: #b1b1b1;
+}
+
+.login {
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+}
+
+.login i {
+    color: transparent;
+}
+
+
+
+.login i:hover{
+    color: #AA6373;
 }
 
 .video-wrapper video {
@@ -236,6 +253,39 @@ nav a:hover {
 .coming-soon {
     background-image: url("../img/coming-soon-logo_okok.jpg");
 }
+
+#contact-section i {
+    color: #e5e2e8;
+    margin: 30px;
+    position: relative;
+    top: -70px;
+}
+
+#contact-section i:hover, footer i:hover{
+    color: #AA6373;
+}
+
+footer {
+    height: 90px;
+    width: 100%;
+    background-color: #353535;
+}
+
+footer i {
+    color: #e5e2e8;
+    float: right;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.copy-write {
+    position: relative;
+    top: 50%;
+    color: #e5e2e8;
+    font-size: 0.7rem;
+}
+
+
 
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {

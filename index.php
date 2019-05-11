@@ -35,10 +35,13 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 </head>
 <body>
 	<div class="menu_toggler">
-		<span></span>
+		<span class="menu_button"></span>
 	</div>
 	<main class="container">
 		<nav>
+			<div class="login">
+				<a href="login.php"><i class="fas fa-lock fa-lg"></i></a>
+			</div>
 			<div class="nav-links">
 				<a href="#about-section">About Me</a>
 				<a href="#portfolio-section">Portfolio</a>
@@ -113,26 +116,21 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 				</div>
 			</div>
 		</section>
+		<section class="container">
+			<div class="wrapper contact-wrapper" id="contact-section">
+				<div class="section-header">
+					<h1 class="front-text">Contact</h1>
+					<h1 class="shadow-text">Reach Out!</h1>
+				</div>
+				<a href="mailto:jamila_ferron@hotmail.co.uk"><i class="fas fa-envelope fa-5x"></i></a>
+				<a href="tel:07534955581"><i class="fas fa-phone fa-5x"></i></a>
+			</div>
+		</section>
+		<footer>
+			<span class="copy-write">Copyright &copy; Jamila Ferron 2019</span>
+			<a target="_blank" href="https://github.com/jamilaferron"><i class="fab fa-github-square fa-3x"></i></a>
+			<a target="_blank" href="https://www.linkedin.com/in/jamila-ferron-6491938a/"><i class="fab fa-linkedin fa-3x"></i></a>
+		</footer>
 	</main>
-
-
-<!--	<section class="container">-->
-<!--		<div class="wrapper contact-wrapper" id="contact-section">-->
-<!--			<div class="section-header">-->
-<!--				<h1 class="front-text">Contact</h1>-->
-<!--				<h1 class="shadow-text">Reach Out!</h1>-->
-<!--			</div>-->
-<!--			<div class="contact-icon-wrapper">-->
-<!--				<a href="mailto:jamila_ferron@hotmail.co.uk"><img class="contact-icon" src="img/envelope.svg" alt=""/></a>-->
-<!--			</div>-->
-<!--			<div>-->
-<!--				<a href="tel:07534955581"><img class="contact-icon" src="img/phone.svg" alt=""/></a>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</section>-->
-<!--	<footer>-->
-<!--		<a target="_blank" href="https://github.com/jamilaferron"><img class="footer-icon" src="img/github-sign.svg" alt=""/></a>-->
-<!--		<a target="_blank" href="https://www.linkedin.com/in/jamila-ferron-6491938a/"><img class="footer-icon" src="img/linkedin.svg" alt=""/></a>-->
-<!--	</footer>-->
 </body>
 </html>
