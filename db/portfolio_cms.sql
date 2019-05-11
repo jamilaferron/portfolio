@@ -63,7 +63,7 @@ LOCK TABLES `projects` WRITE;
 
 INSERT INTO `projects` (`id`, `name`, `url`, `img`, `deleted`)
 VALUES
-	(1,'Logo Challenge','http://bit.ly/Logo-Challenge','uploads/638712503.jpg',0),
+	(1,'Logo Challenge','http://bit.ly/Logo-Challenge','uploads/6387125032.jpg',0),
 	(2,'Paintmaster 3000','http://bit.ly/paintmaster3000','uploads/paintmaster.png',0),
 	(3,'Pilot Shop','http://bit.ly/Pilot-Shop','uploads/pilotshop.png',0),
 	(4,'Aptitude Test','http://bit.ly/ma-aptitudetest','uploads/aptitudeTest.png',0),
