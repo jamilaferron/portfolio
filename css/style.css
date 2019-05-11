@@ -18,7 +18,7 @@ body{
 }
 
 .menu_toggler {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     z-index: 9999;
@@ -92,10 +92,12 @@ nav {
     width: 59%;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     padding: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     transition: 300ms left cubic-bezier(0.77,0,0.175,1);
+}
+
+.nav-links {
+    position: fixed;
+    width: 30%;
 }
 
 nav.active {

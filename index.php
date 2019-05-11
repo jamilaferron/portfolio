@@ -39,9 +39,12 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 	</div>
 	<main class="container">
 		<nav>
-			<a href="#about-section">About Me</a>
-			<a href="#portfolio-section">Portfolio</a>
-			<a href="#contact-section">Contact Me</a>
+			<div class="nav-links">
+				<a href="#about-section">About Me</a>
+				<a href="#portfolio-section">Portfolio</a>
+				<a href="#contact-section">Contact Me</a>
+			</div>
+
 		</nav>
 		<div class="wrapper video-wrapper">
 			<video autoplay muted loop>
