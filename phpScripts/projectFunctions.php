@@ -99,8 +99,12 @@ function displayEditProjectModal (array $projects) : string {
 												<input type="text" name="editProject-name" value="'.$project['name'].'">
 											</div>
 											<div class="form-group">
-												<label for="project-url">Project Link</label>
-												<input type="text" name="editProject-url" value="'.$project['url'].'">
+												<label for="project-url">Live Link</label>
+												<input type="text" name="editProject-url" value="'.$project['live_link'].'">
+											</div>
+											<div class="form-group">
+												<label for="project-url">Repo Link</label>
+												<input type="text" name="editProject-url" value="'.$project['repo_link'].'">
 											</div>
 											<div class="form-group">
 												<input type="hidden" name="hiddenImg" value="'. $project['img'] .'">
@@ -138,13 +142,15 @@ function displayEditProjectModal (array $projects) : string {
 function displayProjectTableRow (array $projects) : string {
 	$string = '';
 	foreach ($projects as $project) {
-		if (!in_array('', $project) && array_key_exists('id', $project) && array_key_exists('name', $project)) {
 			$string .= '<tr>
 					<td>
 						<p>' . $project['name'] . '</p>
 					</td>
 					<td>
-						<p>' . $project['url'] . '</p>
+						<p>' . $project['live_link'] . '</p>
+					</td>
+					<td>
+						<p>' . $project['repo_link'] . '</p>
 					</td>
 					<td>
 						<img src="'.$project['img'].'" alt="project_image" class="table-img">
@@ -161,7 +167,6 @@ function displayProjectTableRow (array $projects) : string {
 						</form>
 					</td>
 				</tr>';
-		}
 	}
 	return $string;
 }

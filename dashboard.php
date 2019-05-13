@@ -175,7 +175,8 @@ require_once 'phpScripts/dashboard.php';
 								<thead>
 								<tr>
 									<th>Name</th>
-									<th>Link</th>
+									<th>Live Link</th>
+									<th>Repo Link</th>
 									<th>Image</th>
 									<th>Edit</th>
 									<th>Delete</th>
