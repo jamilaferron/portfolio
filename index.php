@@ -9,6 +9,7 @@ $db = dbConnection();
 $aboutMeArray = getParagraphs($db);
 $paragraphs = viewParagraphs($aboutMeArray);
 $projectsArray = getProjects($db);
+var_dump($projectsArray);
 $projects = viewProjects($projectsArray);
 
 if(!isset($_SESSION['loggedIn'])) {

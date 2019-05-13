@@ -9,10 +9,10 @@
  * @param string $img accepts a string submitted via a form as an input
  * @return String confirmation message
  */
-function addProject(PDO $db, string $name, string $url, string $img){
+function addProject(PDO $db, string $name, string $img, string $live = NULL, string $repo = NULL){
 
-	$query = $db->prepare("INSERT INTO `projects` (`name`,`url`,`img`) VALUES (:name, :url, :img);");
-	$query->execute(['name'=>$name, 'url'=>$url, 'img'=>$img]);
+	$query = $db->prepare("INSERT INTO `projects` (`name`,`live_link`,`repo_link`, `img`) VALUES (:name, :live, :repo, :img);");
+	$query->execute(['name'=>$name, 'live'=>$live, 'repo'=>$repo,'img'=>$img]);
 	return 'Your Project has been saved';
 }
 
@@ -39,9 +39,9 @@ function deleteProject (PDO $db, int $id) : void {
  *
  * @return bool of true if the update is successful.
  */
-function editProject (PDO $db, int $id, string $name, string $url, string $img): bool{
-	$query = $db->prepare("UPDATE `projects` SET `name` = :name, `url` = :url, `img` = :img WHERE `id` = :id;");
-	return $query->execute(['name'=>$name, 'url'=>$url, 'img'=>$img, 'id'=>$id]);
+function editProject (PDO $db, int $id, string $name, string $img, string $live = NULL, string $repo = NULL): bool{
+	$query = $db->prepare("UPDATE `projects` SET `name` = :name, `live` = :live, `repo` = :repo, `img` = :img WHERE `id` = :id;");
+	return $query->execute(['name'=>$name, 'live'=>$live, 'repo'=>$repo,'img'=>$img, 'id'=>$id]);
 }
 
 /**
@@ -57,9 +57,15 @@ function viewProjects(array $projects) : string {
 
 			$string .= '<div class="project-container" style="background-image: url('.$project['img'].')">
 	<div class="card-overlay">
-		<div class="overlay-text">'.$project['name'].'</div>
-		<a target="_blank" href="'.$project['url'].'"><div class="button"> View More</div></a>
-	</div>
+		<div class="overlay-text">'.$project['name'].'</div>';
+			if ($project['live_link'] != ""){
+				$string .='<a target="_blank" href="'.$project['live_link'].'"><i class="project-urls fas fa-cloud-upload-alt fa-3x"></i></a>';
+			}
+		if ($project['repo_link'] != ""){
+			$string .='<a target="_blank" href="'.$project['repo_link'].'"><i class="project-urls fab fa-github-square fa-3x"></i></a>';
+		}
+
+		$string .= '</div>
 </div>';
 
 	}
@@ -169,7 +175,7 @@ function displayProjectTableRow (array $projects) : string {
  * @return array or paragraphs with their associated id's
  */
 function getProjects (PDO $db) : array {
-	$query = $db->prepare('SELECT `id`, `name`, `url`, `img` FROM `projects` WHERE `deleted` = 0;');
+	$query = $db->prepare('SELECT `id`, `name`, `live_link`, `repo_link`, `img` FROM `projects` WHERE `deleted` = 0;');
 	$query->execute();
 	return $query->fetchAll();
 }

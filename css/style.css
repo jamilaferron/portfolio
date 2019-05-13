@@ -284,6 +284,19 @@ footer i {
 
 }
 
+.project-container {
+    background-size: cover;
+}
+.project-urls {
+    margin-top: 70px;
+    padding: 5px;
+    color: #AA6373;
+}
+
+.project-urls:hover {
+    color: #b1b1b1;
+}
+
 
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
