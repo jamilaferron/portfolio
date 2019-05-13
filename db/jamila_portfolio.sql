@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: jamila_portfolio
-# Generation Time: 2019-05-11 09:41:35 +0000
+# Generation Time: 2019-05-13 21:34:06 +0000
 # ************************************************************
 
 
@@ -52,7 +52,8 @@ DROP TABLE IF EXISTS `projects`;
 CREATE TABLE `projects` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
-  `url` varchar(255) NOT NULL DEFAULT '',
+  `live_link` varchar(255) DEFAULT NULL,
+  `repo_link` varchar(255) DEFAULT NULL,
   `img` varchar(255) NOT NULL DEFAULT '',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -61,14 +62,14 @@ CREATE TABLE `projects` (
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
 
-INSERT INTO `projects` (`id`, `name`, `url`, `img`, `deleted`)
+INSERT INTO `projects` (`id`, `name`, `live_link`, `repo_link`, `img`, `deleted`)
 VALUES
-	(1,'Logo Challenge','http://bit.ly/Logo-Challenge','uploads/6387125032.jpg',0),
-	(2,'Paintmaster 3000','http://bit.ly/paintmaster3000','uploads/paintmaster.png',0),
-	(3,'Pilot Shop','http://bit.ly/Pilot-Shop','uploads/pilotshop.png',0),
-	(4,'Aptitude Test','http://bit.ly/ma-aptitudetest','uploads/aptitudeTest.png',0),
-	(5,'Top Dog','http://bit.ly/nmr-topdog','uploads/topdog.png',0),
-	(6,'Portfolio CMS','http://bit.ly/portfolio-cms','uploads/cms.png',0);
+	(1,'Logo Challenge','','http://bit.ly/Logo-Challenge','uploads/638712503.jpg',0),
+	(2,'Paintmaster 3000','http://bit.ly/paintmaster3000','https://github.com/Mayden-Academy/2019-paint-app','uploads/paintmaster.png',0),
+	(3,'Pilot Shop','','http://bit.ly/Pilot-Shop','uploads/pilotshop.png',0),
+	(4,'Aptitude Test','','http://bit.ly/ma-aptitudetest','uploads/aptitudeTest.png',0),
+	(5,'Top Dog','http://bit.ly/nmr-topdog','https://github.com/Mayden-Academy/2019-nmr-TopDog','uploads/topdog.png',0),
+	(6,'Portfolio CMS','','http://bit.ly/portfolio-cms','uploads/cms.png',0);
 
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
