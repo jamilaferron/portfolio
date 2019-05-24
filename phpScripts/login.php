@@ -116,7 +116,7 @@
 		$string = '';
 		if($loggedIn === true) {
 			$string .= '<form method="post" action="'. $page .'" class="logout-button">
-								<input type="submit" name="logout" value="Logout">
+								<input class="btn-logout" type="submit" name="logout" value="Logout">
 						</form>';
 		}
 		return $string;

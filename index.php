@@ -1,13 +1,15 @@
 <?php
 	session_start();
-require 'db/dbConnection.php';
-require 'phpScripts/functions.php';
-require 'phpScripts/viewAboutMe.php';
+require_once 'db/dbConnection.php';
+require_once 'phpScripts/paragraphFunctions.php';
+require_once 'phpScripts/projectFunctions.php';
 require_once 'phpScripts/login.php';
 
 $db = dbConnection();
-$aboutMeArray = getAboutMe($db);
+$aboutMeArray = getParagraphs($db);
 $paragraphs = viewParagraphs($aboutMeArray);
+$projectsArray = getProjects($db);
+$projects = viewProjects($projectsArray);
 
 if(!isset($_SESSION['loggedIn'])) {
 	$_SESSION['loggedIn'] = false;
@@ -46,6 +48,9 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 				<a href="#about-section">About Me</a>
 				<a href="#portfolio-section">Portfolio</a>
 				<a href="#contact-section">Contact Me</a>
+				<?php
+				echo $logoutButton;
+				?>
 			</div>
 
 		</nav>
@@ -76,43 +81,7 @@ $logoutButton = displayLoginButton($loggedIn, 'index.php')
 					<h1 class="shadow-text">My Work</h1>
 				</div>
 				<div class="gallery">
-					<div class="project-container project-1">
-						<div class="card-overlay">
-							<div class="overlay-text">Logo Challenge</div>
-							<a target="_blank" href="https://github.com/jamilaferron/Mayden-Academy-Logo"><div class="button"> View More</div></a>
-						</div>
-					</div>
-					<div class="project-container project-2">
-						<div class="card-overlay">
-							<div class="overlay-text">Pilot Shop</div>
-							<a target="_blank" href="https://git@github.com/jamilaferron/PilotShop-Build"><div class="button"> View More</div></a>
-						</div>
-					</div>
-					<div class="project-container project-3">
-						<div class="card-overlay">
-							<div class="overlay-text">Paint Master 3000</div>
-							<a target="_blank" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/"><div class="button"> View More</div></a>
-						</div>
-
-					</div>
-					<div class="project-container project-4">
-						<div class="card-overlay">
-							<div class="overlay-text">Aptitude Test</div>
-							<a target="_blank" href="https://github.com/Mayden-Academy/aptitude-test/tree/master/app"><div class="button"> View More</div></a>
-						</div>
-					</div>
-					<div class="project-container coming-soon">
-						<div class="card-overlay">
-							<div class="overlay-text">Logo Challenge</div>
-							<a href="#"><div class="button"> View More</div></a>
-						</div>
-					</div>
-					<div class="project-container coming-soon">
-						<div class="card-overlay">
-							<div class="overlay-text">Logo Challenge</div>
-							<a href="#"><div class="button"> View More</div></a>
-						</div>
-					</div>
+					<?php echo $projects; ?>
 				</div>
 			</div>
 		</section>

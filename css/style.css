@@ -17,6 +17,10 @@ body{
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .menu_toggler {
     position: fixed;
     top: 20px;
@@ -109,7 +113,6 @@ nav a {
     font-size: 1.4rem;
     margin-left: -40px;
     margin-bottom: 1rem;
-    text-decoration: none;
     display: block;
     color: #AA6373;
 }
@@ -232,26 +235,7 @@ nav a:hover {
     font-size: 13px;
     padding: 12px 0;
     color: #AA6373;
-}
-
-.project-1 {
-    background-image: url("../img/638712503.jpg");
-}
-
-.project-2 {
-    background-image: url("../img/pilotshop.png");
-}
-
-.project-3 {
-    background-image: url("../img/paintmaster.png");
-}
-
-.project-4 {
-     background-image: url("../img/aptitudeTest.png");
- }
-
-.coming-soon {
-    background-image: url("../img/coming-soon-logo_okok.jpg");
+    /* text-decoration: none; */
 }
 
 #contact-section i {
@@ -285,6 +269,33 @@ footer i {
     font-size: 0.7rem;
 }
 
+.btn-logout {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    margin-left: -40px;
+    color: #AA6373;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-logout:hover {
+    color: #b1b1b1;
+
+}
+
+.project-container {
+    background-size: cover;
+}
+.project-urls {
+    margin-top: 70px;
+    padding: 5px;
+    color: #AA6373;
+}
+
+.project-urls:hover {
+    color: #b1b1b1;
+}
 
 
 /* On screens that are 992px wide or less, the background color is blue */
@@ -338,3 +349,4 @@ footer i {
         width: 100%;
     }
 }
+
